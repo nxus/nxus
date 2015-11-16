@@ -1,6 +1,6 @@
 {
   "name": "nxus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The installable Nxus package and command line",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,8 @@
   "engines": {
     "node": "~4.2.1"
   },
-  "bin": 
-  { 
-    "nxus":"bin/nxus.js"
+  "bin": {
+    "nxus": "bin/nxus.js"
   },
   "repository": {
     "type": "git",
