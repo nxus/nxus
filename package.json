@@ -4,8 +4,16 @@
   "description": "The installable Nxus package and command line",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "mocha --compilers js:babel/register -R spec test/*",
+    "compile": "babel --optional runtime -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "engines": {
+    "node": "~4.2.1"
+  },
+  "bin": 
+  { 
+    "nxus":"bin/nxus.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +24,11 @@
   "bugs": {
     "url": "https://github.com/nxus/nxus/issues"
   },
-  "homepage": "https://github.com/nxus/nxus#readme"
+  "homepage": "https://github.com/nxus/nxus#readme",
+  "dependencies": {
+    "@nxus/core": "^1.0.7",
+    "@nxus/scaffold": "^1.0.0",
+    "@nxus/scaffold-static-site": "^1.0.0",
+    "commander": "^2.9.0"
+  }
 }
